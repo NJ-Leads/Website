@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing — NJLeads</title>
+  <meta name="description" content="NJLeads pricing by town size. Annual access, exclusive coverage, and lead delivery through the client portal." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="NJLeads Home">
+        <div class="brand-mark"><span>NJ</span></div>
+        <div>
+          <div class="brand-name"><span class="nj">NJ</span><span class="leads">Leads</span></div>
+          <div class="brand-sub">Exclusive exterior leads by town</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="how-it-works.html">How it works</a>
+        <a data-nav href="pricing.html">Pricing</a>
+        <a data-nav href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn small" href="contact.html">Talk to us</a>
+        <a class="btn primary small" href="https://portal.njleads.com" target="_blank" rel="noopener">Client Portal</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <h1>Pricing</h1>
+      <p class="sub">Annual pricing varies by town size and category coverage. Below is a simple starting point.</p>
+
+      <div class="pricing-grid">
+        <div class="card price">
+          <h3>Small Town</h3>
+          <div class="amt">$5,000<span class="small-note">/yr</span></div>
+          <div class="small-note">Best for smaller markets.</div>
+          <ul>
+            <li>Exclusive town access</li>
+            <li>Portal lead delivery</li>
+            <li>Standard support</li>
+          </ul>
+          <div class="divider"></div>
+          <a class="btn" href="contact.html">Check availability</a>
+        </div>
+
+        <div class="card price featured">
+          <h3>Medium Town</h3>
+          <div class="amt">$10,000<span class="small-note">/yr</span></div>
+          <div class="small-note">Most popular tier.</div>
+          <ul>
+            <li>Exclusive town access</li>
+            <li>Priority lead batches</li>
+            <li>Onboarding support</li>
+          </ul>
+          <div class="divider"></div>
+          <a class="btn primary" href="contact.html">Reserve a town</a>
+        </div>
+
+        <div class="card price">
+          <h3>Premium Town</h3>
+          <div class="amt">$18,000<span class="small-note">/yr</span></div>
+          <div class="small-note">High-volume markets.</div>
+          <ul>
+            <li>Exclusive town access</li>
+            <li>Highest coverage priority</li>
+            <li>Dedicated onboarding</li>
+          </ul>
+          <div class="divider"></div>
+          <a class="btn" href="contact.html">Talk pricing</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="card hero-card">
+        <h3>Notes</h3>
+        <p class="small-note">
+          Final pricing depends on category coverage and availability. We’ll confirm your town and category before onboarding.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> NJLeads. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
