@@ -308,17 +308,15 @@ input:focus, textarea:focus{
    COVERAGE PAGE IMPROVEMENTS
    - Better flow per card
    - "Reserve a Town" button on every card
-   - ALL category titles are orange (Bundle stays white)
+   - ALL category titles are orange (including Bundle)
    ========================================================= */
 
-/* Full-width button utility */
 .btn.full{
   width: 100%;
   text-align: center;
   justify-content: center;
 }
 
-/* Coverage card layout */
 .coverage-card{
   padding: 18px;
   display:flex;
@@ -326,14 +324,12 @@ input:focus, textarea:focus{
   min-height: 260px;
 }
 
-/* Content area */
 .coverage-body{
   display:flex;
   flex-direction:column;
   gap: 10px;
 }
 
-/* Title (default orange for categories) */
 .coverage-title{
   margin: 0;
   font-size: 22px;
@@ -342,12 +338,6 @@ input:focus, textarea:focus{
   color: var(--orange);
 }
 
-/* Featured card title stays white for contrast */
-.coverage-card.featured .coverage-title{
-  color: var(--text);
-}
-
-/* Bottom area pinned to the bottom */
 .coverage-foot{
   margin-top: auto;
   padding-top: 14px;
@@ -357,7 +347,6 @@ input:focus, textarea:focus{
   gap: 12px;
 }
 
-/* "Sold as" line */
 .sold-as{
   font-size: 13px;
   color: var(--muted);
