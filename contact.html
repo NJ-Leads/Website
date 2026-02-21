@@ -4,78 +4,127 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — NJLeads</title>
-  <meta name="description" content="Contact NJLeads to reserve a town and discuss contractor access." />
+  <meta name="description" content="Contact NJLeads to reserve exclusive rights to a town and receive exterior damage leads through our portal." />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header class="nav">
-  <div class="container nav-inner">
-    <a class="brand logo-wrap" href="index.html" aria-label="NJLeads Home">
-      <img src="assets/logo.png" alt="NJLeads" class="logo-img" />
-    </a>
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="NJLeads Home">
+        <div class="brand-mark">
+          <img src="assets/logo-icon.png" alt="NJLeads" />
+        </div>
+        <div>
+          <div class="brand-name"><span class="nj">NJ</span><span class="leads">Leads</span></div>
+          <div class="brand-sub">Exclusive exterior leads by town</div>
+        </div>
+      </a>
 
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="how-it-works.html">How it works</a>
-      <a data-nav href="coverage.html">What we cover</a>
-      <a data-nav href="pricing.html">Pricing</a>
-      <a data-nav href="contact.html">Contact</a>
-    </nav>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="how-it-works.html">How it works</a>
+        <a data-nav href="coverage.html">What we cover</a>
+        <a data-nav href="pricing.html">Pricing</a>
+        <a data-nav href="contact.html">Contact</a>
+      </nav>
 
-    <div class="nav-cta">
-      <a class="btn small" href="contact.html">Talk to us</a>
-      <a class="btn primary small" href="https://portal.njleads.com" target="_blank" rel="noopener">Client Portal</a>
+      <div class="nav-cta">
+        <a class="btn small" href="contact.html">Talk to us</a>
+        <a class="btn primary small" href="https://portal.njleads.com" target="_blank" rel="noopener">Client Portal</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
+
   <main class="page">
     <div class="container">
       <h1>Contact</h1>
-      <p class="sub">Tell us what towns/categories you want. This form opens your email client (no backend required).</p>
+      <p class="sub">
+        Want to reserve a town or bundle multiple categories? Tell us what you’re looking for and we’ll confirm
+        availability and next steps.
+      </p>
 
       <div class="two-col">
-        <form id="contactForm" class="card form">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" />
-          </div>
-          <div class="field">
-            <label for="company">Company</label>
-            <input id="company" name="company" type="text" placeholder="Contractor / Company name" />
-          </div>
-          <div class="field">
-            <label for="message">What towns / categories?</label>
-            <textarea id="message" name="message" placeholder="Example: Cherry Hill • Roof + Siding"></textarea>
-          </div>
+        <!-- Left: Form -->
+        <div class="card form">
+          <form action="#" method="post">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
 
-          <button class="btn primary" type="submit">Send message</button>
-          <div class="notice">
-            Prefer direct email? <a href="mailto:sales@njleads.com">sales@njleads.com</a>
-          </div>
-        </form>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Your company name" autocomplete="organization" />
+            </div>
 
-        <div class="card hero-card">
-          <h3>Quick links</h3>
-          <p class="small-note">If you’re already a customer, use the portal.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="https://portal.njleads.com" target="_blank" rel="noopener">Client Portal</a>
-            <a class="btn" href="pricing.html">Pricing</a>
-            <a class="btn" href="how-it-works.html">How it works</a>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="town">Town(s) of interest</label>
+              <input id="town" name="town" type="text" placeholder="e.g., Cherry Hill, Voorhees, Marlton…" />
+            </div>
+
+            <div class="field">
+              <label for="categories">Categories</label>
+              <input id="categories" name="categories" type="text" placeholder="e.g., Roofs, Siding, Windows, Driveways, Fences" />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you're looking for (exclusive town, bundle, timeline, etc.)" required></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">Send message</button>
+
+            <div class="notice">
+              By submitting, you agree to be contacted by NJLeads about availability and onboarding.
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Sales copy / next steps -->
+        <div>
+          <div class="card hero-card">
+            <h3>How reservations work</h3>
+            <p class="small-note">
+              We offer exclusive rights by <strong>town + category</strong>. Once a town/category is reserved, we don’t sell it
+              to competing contractors.
+            </p>
+            <p class="small-note">
+              You’ll receive a private portal experience with a detailed property list, visuals, and tracking—refreshed annually.
+            </p>
+
+            <div class="divider"></div>
+
+            <div class="badges">
+              <div class="badge"><b>Exclusive</b> by town</div>
+              <div class="badge"><b>Multi-category</b> bundles</div>
+              <div class="badge orange"><b>Annual refresh</b> visuals</div>
+            </div>
           </div>
 
           <div class="divider"></div>
 
-          <h3>What to include</h3>
-          <p class="small-note">
-            Town(s) you want • Category (roof/siding/etc.) • Service area • Best contact info
-          </p>
+          <div class="card hero-card">
+            <h3>Faster outreach. Better close rate.</h3>
+            <p class="small-note">
+              Instead of guessing where to knock, NJLeads helps you prioritize the highest-opportunity streets with visual indicators
+              of potential exterior damage.
+            </p>
+            <a class="btn" href="pricing.html" style="margin-top:6px;">View pricing</a>
+          </div>
         </div>
       </div>
+
     </div>
   </main>
 
@@ -91,5 +140,3 @@
   <script src="assets/script.js"></script>
 </body>
 </html>
-
-
