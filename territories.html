@@ -106,7 +106,62 @@
     @media (max-width: 980px){
       .hero-grid { grid-template-columns: 1fr; }
     }
-  </style>
+  
+/* === WHITE PANELS FOR SEARCH + TOWN LIST === */
+
+.card.hero-card.white-panel {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.card.hero-card.white-panel h3,
+.card.hero-card.white-panel p,
+.card.hero-card.white-panel .small-note,
+.card.hero-card.white-panel .hint {
+  color: #374151;
+}
+
+.white-panel .searchbar input {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #111827;
+}
+
+.white-panel .searchbar input::placeholder {
+  color: #9ca3af;
+}
+
+.white-panel .table-wrap {
+  border: 1px solid #e5e7eb;
+}
+
+.white-panel thead th {
+  background: #f9fafb;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.white-panel tbody td {
+  background: #ffffff;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.white-panel tbody tr:hover td {
+  background: #f9fafb;
+}
+
+.white-panel td.num {
+  color: #111827;
+}
+
+.white-panel tbody a {
+  color: #111827;
+  border-bottom: 1px solid rgba(243,111,10,.35);
+}
+
+</style>
 </head>
 
 <body>
@@ -160,7 +215,7 @@
           </div>
         </div>
 
-        <div class="card hero-card">
+        <div class="card hero-card white-panel">
           <h3>How to use this page</h3>
           <p class="small-note">
             Search by town or county, then expand the tier you want. Towns link to individual town pages.
@@ -176,7 +231,7 @@
 
       <!-- SEARCH -->
       <section class="section">
-        <div class="card hero-card">
+        <div class="card hero-card white-panel">
           <h3 style="margin-top:0;">Search towns</h3>
           <div class="searchbar">
             <input id="searchInput" type="text" placeholder="Search by town or county (e.g., Cherry Hill, Camden, Burlington)..." />
@@ -192,7 +247,7 @@
 
       <!-- TABLES -->
       <section class="section">
-        <div class="card hero-card">
+        <div class="card hero-card white-panel">
           <h3 style="margin-top:0;">Town list by tier</h3>
           <p class="small-note" style="margin-top:6px;">
             Tiers are derived from our current rollout dataset and may expand as coverage increases.
@@ -444,7 +499,7 @@
 
       <div class="divider"></div>
 
-      <div class="card hero-card">
+      <div class="card hero-card white-panel">
         <h3>Want to reserve a town?</h3>
         <p class="small-note">
           Tell us your target towns and categories. We’ll confirm availability and next steps.
