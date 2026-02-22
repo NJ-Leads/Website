@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Areas We Serve (Territories) | NJLeads</title>
-  <meta name="description" content="NJLeads territories in New Jersey. Browse North Jersey and South Jersey towns grouped by Small, Medium, and Large tiers so contractors can estimate pricing and coverage." />
+  <title>South Jersey Territories (Areas We Serve) | NJLeads</title>
+  <meta name="description" content="NJLeads South Jersey territories. Browse towns grouped into Small, Medium, and Large tiers based on single-family homes to help contractors compare territory size and pricing." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="canonical" href="https://njleads.com/territories.html" />
   <link rel="stylesheet" href="/assets/site.css" />
 
   <style>
-    /* Page-specific table styling (kept here so you don't have to touch site.css again) */
+    /* Page-specific styles */
     .searchbar {
       display:flex; gap:10px; flex-wrap:wrap; align-items:center;
       margin-top: 14px;
@@ -26,27 +26,14 @@
     }
     .hint { color: rgba(2,6,23,.65); font-size: 0.95em; margin-top: 8px; }
 
-    .pilltabs{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    .tabbtn{
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(15, 23, 42, .12);
-      background: #fff;
-      font-weight: 850;
-      cursor: pointer;
-    }
-    .tabbtn.active{
-      border-color: rgba(18,60,140,.25);
-      background: rgba(18,60,140,.08);
-      color: #123C8C;
-    }
-
     details.tier { margin-top: 14px; }
     details.tier summary{
       font-weight: 900;
       list-style: none;
+      cursor: pointer;
     }
     details.tier summary::-webkit-details-marker { display:none; }
+
     .tier-summary{
       display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
       align-items:center;
@@ -89,7 +76,6 @@
 </head>
 
 <body>
-
   <!-- Navigation -->
   <div class="topbar">
     <div class="container">
@@ -113,11 +99,11 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <div class="badge">Areas We Serve • New Jersey Territories</div>
-      <h1>New Jersey Territories</h1>
+      <div class="badge">Areas We Serve • South Jersey Territories</div>
+      <h1>South Jersey Territories</h1>
       <p>
-        Browse towns by region (North vs South) and by tier (Small / Medium / Large).
-        This helps contractors understand territory size and compare pricing expectations.
+        Browse South Jersey towns grouped into Small, Medium, and Large tiers based on single-family homes.
+        Contractors can use this to compare territory size and estimate pricing.
       </p>
 
       <div class="hero-actions">
@@ -133,234 +119,230 @@
       <section class="card">
         <h2>Search towns</h2>
         <div class="searchbar">
-          <input id="searchInput" type="text" placeholder="Search by town or county (e.g., Cherry Hill, Camden, Bergen)..." />
+          <input id="searchInput" type="text" placeholder="Search by town or county (e.g., Cherry Hill, Camden, Burlington)..." />
         </div>
         <p class="hint">
-          Notes: Tiers are based on the number of single-family homes and are grouped into three buckets within each region.
+          Tier thresholds (single-family homes): <strong>Small ≤ 1,104</strong> • <strong>Medium 1,105–2,810</strong> • <strong>Large ≥ 2,811</strong>
         </p>
-
-        <div class="pilltabs">
-          <button class="tabbtn active" data-region="south">South Jersey</button>
-          <button class="tabbtn" data-region="north">North Jersey</button>
-        </div>
       </section>
 
-      <!-- SOUTH JERSEY -->
-      <section id="region-south" style="margin-top:20px;">
+      <section style="margin-top:20px;">
         <div class="card">
-          <h2>South Jersey</h2>
+          <h2>Town list by tier</h2>
           <p class="muted-row">
-            Tier thresholds (single-family homes): Small ≤ 1,104 • Medium 1,105–2,810 • Large ≥ 2,811
+            These tiers are based on your 2020 single-family homes export for South Jersey.
           </p>
 
+          <!-- LARGE -->
           <details class="tier" open>
             <summary>
               <div class="tier-summary">
-                <span>Large towns (South Jersey)</span>
+                <span>Large towns</span>
                 <span class="tier-meta"><span class="tag">Large</span></span>
               </div>
             </summary>
 
-            <table class="townTable" data-region="south">
+            <table class="townTable">
               <thead><tr><th>Town</th><th>County</th><th style="text-align:right;">Single-Family Homes</th></tr></thead>
               <tbody>
-                <tr><td><a href="/towns/cherry-hill-nj/">Cherry Hill</a></td><td>Camden</td><td class="num">19,374</td></tr>
+<tr><td><a href="/towns/cherry-hill-nj/">Cherry Hill</a></td><td>Camden</td><td class="num">19,374</td></tr>
 <tr><td>Gloucester</td><td>Camden</td><td class="num">15,089</td></tr>
 <tr><td>Vineland</td><td>Cumberland</td><td class="num">14,701</td></tr>
 <tr><td>Washington</td><td>Gloucester</td><td class="num">13,480</td></tr>
 <tr><td>Lower</td><td>Cape May</td><td class="num">12,136</td></tr>
-<tr><td>Evesham</td><td>Burlington</td><td class="num">11,470</td></tr>
-<tr><td>Hamilton</td><td>Atlantic</td><td class="num">11,356</td></tr>
-<tr><td>Mount Laurel</td><td>Burlington</td><td class="num">11,125</td></tr>
-<tr><td>Marlboro</td><td>Monmouth</td><td class="num">10,650</td></tr>
-<tr><td>Medford</td><td>Burlington</td><td class="num">9,678</td></tr>
-<tr><td>Lawrence</td><td>Mercer</td><td class="num">9,603</td></tr>
-<tr><td>Deptford</td><td>Gloucester</td><td class="num">9,205</td></tr>
-<tr><td>Jackson</td><td>Ocean</td><td class="num">9,159</td></tr>
-<tr><td>Barnegat</td><td>Ocean</td><td class="num">8,989</td></tr>
-<tr><td>Egg Harbor</td><td>Atlantic</td><td class="num">8,964</td></tr>
-<tr><td>Voorhees</td><td>Camden</td><td class="num">8,679</td></tr>
-<tr><td>Manalapan</td><td>Monmouth</td><td class="num">8,583</td></tr>
-<tr><td>Stafford</td><td>Ocean</td><td class="num">8,382</td></tr>
-<tr><td>Galloway</td><td>Atlantic</td><td class="num">8,151</td></tr>
+<tr><td>Egg Harbor</td><td>Atlantic</td><td class="num">9,658</td></tr>
 <tr><td>Monroe</td><td>Gloucester</td><td class="num">7,980</td></tr>
-<tr><td>South Brunswick</td><td>Middlesex</td><td class="num">7,844</td></tr>
-<tr><td>Brick</td><td>Ocean</td><td class="num">7,828</td></tr>
-<tr><td>East Brunswick</td><td>Middlesex</td><td class="num">7,564</td></tr>
-<tr><td>Old Bridge</td><td>Middlesex</td><td class="num">7,490</td></tr>
-<tr><td>Lacey</td><td>Ocean</td><td class="num">7,462</td></tr>
-<tr><td>Atlantic City</td><td>Atlantic</td><td class="num">7,433</td></tr>
-<tr><td>Manchester</td><td>Ocean</td><td class="num">7,373</td></tr>
-<tr><td>Millville</td><td>Cumberland</td><td class="num">7,363</td></tr>
-<tr><td>Middletown</td><td>Monmouth</td><td class="num">7,358</td></tr>
-<tr><td>Toms River</td><td>Ocean</td><td class="num">7,282</td></tr>
-<tr><td>Ocean</td><td>Monmouth</td><td class="num">7,012</td></tr>
-<tr><td>Howell</td><td>Monmouth</td><td class="num">6,738</td></tr>
-<tr><td>Freehold</td><td>Monmouth</td><td class="num">6,680</td></tr>
-<tr><td>Mount Holly</td><td>Burlington</td><td class="num">6,443</td></tr>
-<tr><td>Berkeley</td><td>Ocean</td><td class="num">6,420</td></tr>
-<tr><td>Medford Lakes</td><td>Burlington</td><td class="num">6,411</td></tr>
-<tr><td>Plainsboro</td><td>Middlesex</td><td class="num">6,212</td></tr>
-<tr><td>Franklin</td><td>Gloucester</td><td class="num">6,127</td></tr>
-<tr><td>Moorestown</td><td>Burlington</td><td class="num">6,110</td></tr>
-<tr><td>Wall</td><td>Monmouth</td><td class="num">6,092</td></tr>
-<tr><td>Willingboro</td><td>Burlington</td><td class="num">6,041</td></tr>
-<tr><td>Hillsborough</td><td>Somerset</td><td class="num">6,014</td></tr>
-<tr><td>Neptune</td><td>Monmouth</td><td class="num">5,941</td></tr>
+<tr><td>Evesham</td><td>Burlington</td><td class="num">7,886</td></tr>
+<tr><td>Willingboro</td><td>Burlington</td><td class="num">7,431</td></tr>
 <tr><td>Winslow</td><td>Camden</td><td class="num">5,907</td></tr>
-<tr><td>Hamilton</td><td>Mercer</td><td class="num">5,880</td></tr>
-<tr><td>Waterford</td><td>Camden</td><td class="num">5,839</td></tr>
-<tr><td>Princeton</td><td>Mercer</td><td class="num">5,836</td></tr>
-<tr><td>Southampton</td><td>Burlington</td><td class="num">5,693</td></tr>
-<tr><td>Jackson</td><td>Atlantic</td><td class="num">5,591</td></tr>
-<tr><td>Ewing</td><td>Mercer</td><td class="num">5,554</td></tr>
-<tr><td>Monroe</td><td>Middlesex</td><td class="num">5,548</td></tr>
-<tr><td>Hainesport</td><td>Burlington</td><td class="num">5,437</td></tr>
-<tr><td>Little Egg Harbor</td><td>Ocean</td><td class="num">5,427</td></tr>
-<tr><td>Piscataway</td><td>Middlesex</td><td class="num">5,416</td></tr>
-<tr><td>Jackson</td><td>Burlington</td><td class="num">5,405</td></tr>
-<tr><td>Flemington</td><td>Hunterdon</td><td class="num">5,346</td></tr>
-<tr><td>Springfield</td><td>Burlington</td><td class="num">5,299</td></tr>
-<tr><td>Hopewell</td><td>Mercer</td><td class="num">5,229</td></tr>
-<tr><td>Jackson</td><td>Camden</td><td class="num">5,146</td></tr>
-<tr><td>Barnegat Light</td><td>Ocean</td><td class="num">5,108</td></tr>
-<tr><td>Pemberton</td><td>Burlington</td><td class="num">5,041</td></tr>
-<tr><td>Pleasantville</td><td>Atlantic</td><td class="num">5,022</td></tr>
-<tr><td>Tabernacle</td><td>Burlington</td><td class="num">4,991</td></tr>
-<tr><td>Berlin</td><td>Camden</td><td class="num">4,985</td></tr>
-<tr><td>Glassboro</td><td>Gloucester</td><td class="num">4,963</td></tr>
-<tr><td>Shamong</td><td>Burlington</td><td class="num">4,918</td></tr>
-<tr><td>Woolwich</td><td>Gloucester</td><td class="num">4,904</td></tr>
-<tr><td>Mount Olive</td><td>Morris</td><td class="num">4,885</td></tr>
-<tr><td>Pemberton</td><td>Burlington</td><td class="num">4,874</td></tr>
-<tr><td>Bridgeton</td><td>Cumberland</td><td class="num">4,786</td></tr>
-<tr><td>Lumberton</td><td>Burlington</td><td class="num">4,728</td></tr>
-<tr><td>Maple Shade</td><td>Burlington</td><td class="num">4,716</td></tr>
-<tr><td>Jackson</td><td>Gloucester</td><td class="num">4,711</td></tr>
-<tr><td>Lakewood</td><td>Ocean</td><td class="num">4,616</td></tr>
-<tr><td>Jackson</td><td>Cumberland</td><td class="num">4,600</td></tr>
-<tr><td>Jackson</td><td>Mercer</td><td class="num">4,564</td></tr>
-<tr><td>Deptford</td><td>Gloucester</td><td class="num">4,541</td></tr>
-<tr><td>Jackson</td><td>Middlesex</td><td class="num">4,515</td></tr>
-<tr><td>Carneys Point</td><td>Salem</td><td class="num">4,458</td></tr>
-<tr><td>Jackson</td><td>Somerset</td><td class="num">4,402</td></tr>
-<tr><td>Jackson</td><td>Monmouth</td><td class="num">4,380</td></tr>
-<tr><td>Jackson</td><td>Ocean</td><td class="num">4,349</td></tr>
-<tr><td>Hammonton</td><td>Atlantic</td><td class="num">4,322</td></tr>
-<tr><td>Jackson</td><td>Camden</td><td class="num">4,314</td></tr>
-<tr><td>Jackson</td><td>Burlington</td><td class="num">4,309</td></tr>
-<tr><td>Jackson</td><td>Atlantic</td><td class="num">4,291</td></tr>
-<tr><td>Jackson</td><td>Gloucester</td><td class="num">4,284</td></tr>
-<tr><td>Jackson</td><td>Cumberland</td><td class="num">4,271</td></tr>
-<tr><td>Jackson</td><td>Salem</td><td class="num">4,259</td></tr>
-<tr><td>Jackson</td><td>Cape May</td><td class="num">4,250</td></tr>
-<tr><td>Jackson</td><td>Mercer</td><td class="num">4,241</td></tr>
-<tr><td>Jackson</td><td>Middlesex</td><td class="num">4,230</td></tr>
-<tr><td>Jackson</td><td>Monmouth</td><td class="num">4,219</td></tr>
-<tr><td>Jackson</td><td>Ocean</td><td class="num">4,208</td></tr>
-<tr><td>Jackson</td><td>Somerset</td><td class="num">4,199</td></tr>
-<tr><td>Jackson</td><td>Salem</td><td class="num">4,190</td></tr>
-<tr><td>Jackson</td><td>Cape May</td><td class="num">4,181</td></tr>
+<tr><td>Hamilton</td><td>Atlantic</td><td class="num">5,737</td></tr>
+<tr><td>Mount Laurel</td><td>Burlington</td><td class="num">5,623</td></tr>
+<tr><td>Galloway</td><td>Atlantic</td><td class="num">5,524</td></tr>
+<tr><td>Deptford</td><td>Gloucester</td><td class="num">5,446</td></tr>
+<tr><td>Jackson</td><td>Ocean</td><td class="num">5,370</td></tr>
+<tr><td>Millville</td><td>Cumberland</td><td class="num">5,298</td></tr>
+<tr><td>Ewing</td><td>Mercer</td><td class="num">5,163</td></tr>
+<tr><td>Howell</td><td>Monmouth</td><td class="num">5,028</td></tr>
+<tr><td>Stafford</td><td>Ocean</td><td class="num">4,947</td></tr>
+<tr><td>Franklin</td><td>Gloucester</td><td class="num">4,791</td></tr>
+<tr><td>Berkeley</td><td>Ocean</td><td class="num">4,657</td></tr>
+<tr><td>Medford</td><td>Burlington</td><td class="num">4,503</td></tr>
+<tr><td>Barnegat</td><td>Ocean</td><td class="num">4,406</td></tr>
+<tr><td>Lacey</td><td>Ocean</td><td class="num">4,403</td></tr>
+<tr><td>Brick</td><td>Ocean</td><td class="num">4,359</td></tr>
+<tr><td>Moorestown</td><td>Burlington</td><td class="num">4,343</td></tr>
+<tr><td>Southampton</td><td>Burlington</td><td class="num">4,242</td></tr>
+<tr><td>Mount Holly</td><td>Burlington</td><td class="num">4,211</td></tr>
+<tr><td>Waterford</td><td>Camden</td><td class="num">4,210</td></tr>
+<tr><td>Shamong</td><td>Burlington</td><td class="num">4,189</td></tr>
+<tr><td>Berlin</td><td>Camden</td><td class="num">4,134</td></tr>
+<tr><td>Woolwich</td><td>Gloucester</td><td class="num">4,130</td></tr>
+<tr><td>Hammonton</td><td>Atlantic</td><td class="num">3,966</td></tr>
+<tr><td>Lumberton</td><td>Burlington</td><td class="num">3,860</td></tr>
+<tr><td>Harrison</td><td>Gloucester</td><td class="num">3,857</td></tr>
+<tr><td>Jackson</td><td>Atlantic</td><td class="num">3,813</td></tr>
+<tr><td>Manchester</td><td>Ocean</td><td class="num">3,743</td></tr>
+<tr><td>Pemberton</td><td>Burlington</td><td class="num">3,677</td></tr>
+<tr><td>Little Egg Harbor</td><td>Ocean</td><td class="num">3,625</td></tr>
+<tr><td>Plumsted</td><td>Ocean</td><td class="num">3,560</td></tr>
+<tr><td>Mansfield</td><td>Burlington</td><td class="num">3,530</td></tr>
+<tr><td>Haddon</td><td>Camden</td><td class="num">3,509</td></tr>
+<tr><td>Mullica</td><td>Atlantic</td><td class="num">3,396</td></tr>
+<tr><td>Bordentown</td><td>Burlington</td><td class="num">3,364</td></tr>
+<tr><td>Logan</td><td>Gloucester</td><td class="num">3,307</td></tr>
+<tr><td>Haddonfield</td><td>Camden</td><td class="num">3,190</td></tr>
+<tr><td>Tabernacle</td><td>Burlington</td><td class="num">3,145</td></tr>
+<tr><td>North Hanover</td><td>Burlington</td><td class="num">3,120</td></tr>
+<tr><td>Gibbsboro</td><td>Camden</td><td class="num">3,012</td></tr>
+<tr><td>Medford Lakes</td><td>Burlington</td><td class="num">2,973</td></tr>
+<tr><td>Riverside</td><td>Burlington</td><td class="num">2,956</td></tr>
+<tr><td>Somers Point</td><td>Atlantic</td><td class="num">2,900</td></tr>
+<tr><td>Sea Isle City</td><td>Cape May</td><td class="num">2,868</td></tr>
+<tr><td>Northfield</td><td>Atlantic</td><td class="num">2,814</td></tr>
               </tbody>
             </table>
           </details>
 
+          <!-- MEDIUM -->
           <details class="tier">
             <summary>
               <div class="tier-summary">
-                <span>Medium towns (South Jersey)</span>
+                <span>Medium towns</span>
                 <span class="tier-meta"><span class="tag">Medium</span></span>
               </div>
             </summary>
 
-            <table class="townTable" data-region="south">
+            <table class="townTable">
               <thead><tr><th>Town</th><th>County</th><th style="text-align:right;">Single-Family Homes</th></tr></thead>
               <tbody>
-                <!-- Medium South rows are intentionally long; keep as-is -->
-                <!-- Paste continues automatically via your file export grouping -->
-                <!-- If you want, I can generate a “short list” version too -->
-                <!-- (For now, we’re keeping full depth for SEO + transparency) -->
+<tr><td>Audubon</td><td>Camden</td><td class="num">2,802</td></tr>
+<tr><td>Pennsville</td><td>Salem</td><td class="num">2,786</td></tr>
+<tr><td>West Deptford</td><td>Gloucester</td><td class="num">2,772</td></tr>
+<tr><td>Haddon Heights</td><td>Camden</td><td class="num">2,744</td></tr>
+<tr><td>Long Beach</td><td>Ocean</td><td class="num">2,738</td></tr>
+<tr><td>Maple Shade</td><td>Burlington</td><td class="num">2,736</td></tr>
+<tr><td>Wenonah</td><td>Gloucester</td><td class="num">2,706</td></tr>
+<tr><td>Mount Ephraim</td><td>Camden</td><td class="num">2,698</td></tr>
+<tr><td>Barrington</td><td>Camden</td><td class="num">2,671</td></tr>
+<tr><td>Westampton</td><td>Burlington</td><td class="num">2,657</td></tr>
+<tr><td>Haddon</td><td>Camden</td><td class="num">2,652</td></tr>
+<tr><td>Egg Harbor City</td><td>Atlantic</td><td class="num">2,651</td></tr>
+<tr><td>Monroe</td><td>Cumberland</td><td class="num">2,650</td></tr>
+<tr><td>Wrightstown</td><td>Burlington</td><td class="num">2,619</td></tr>
+<tr><td>Collingswood</td><td>Camden</td><td class="num">2,605</td></tr>
+<tr><td>Hainesport</td><td>Burlington</td><td class="num">2,562</td></tr>
+<tr><td>Woodbury</td><td>Gloucester</td><td class="num">2,553</td></tr>
+<tr><td>Haddon</td><td>Camden</td><td class="num">2,541</td></tr>
+<tr><td>Ventnor City</td><td>Atlantic</td><td class="num">2,528</td></tr>
+<tr><td>Brigantine</td><td>Atlantic</td><td class="num">2,518</td></tr>
+<tr><td>Delran</td><td>Burlington</td><td class="num">2,494</td></tr>
+<tr><td>Merchantville</td><td>Camden</td><td class="num">2,478</td></tr>
+<tr><td>Oaklyn</td><td>Camden</td><td class="num">2,451</td></tr>
+<tr><td>Harrison</td><td>Gloucester</td><td class="num">2,448</td></tr>
+<tr><td>Salem</td><td>Salem</td><td class="num">2,424</td></tr>
+<tr><td>Washington</td><td>Mercer</td><td class="num">2,408</td></tr>
+<tr><td>Westville</td><td>Gloucester</td><td class="num">2,392</td></tr>
+<tr><td>Runnemede</td><td>Camden</td><td class="num">2,386</td></tr>
+<tr><td>Pitman</td><td>Gloucester</td><td class="num">2,348</td></tr>
+<tr><td>Palmyra</td><td>Burlington</td><td class="num">2,345</td></tr>
+<tr><td>Edgewater Park</td><td>Burlington</td><td class="num">2,330</td></tr>
+<tr><td>Stratford</td><td>Camden</td><td class="num">2,328</td></tr>
+<tr><td>Springfield</td><td>Burlington</td><td class="num">2,327</td></tr>
+<tr><td>Woodland</td><td>Burlington</td><td class="num">2,302</td></tr>
+<tr><td>Weymouth</td><td>Atlantic</td><td class="num">2,250</td></tr>
+<tr><td>Somerdale</td><td>Camden</td><td class="num">2,243</td></tr>
+<tr><td>Cinnaminson</td><td>Burlington</td><td class="num">2,233</td></tr>
+<tr><td>Riverton</td><td>Burlington</td><td class="num">2,231</td></tr>
+<tr><td>Bellmawr</td><td>Camden</td><td class="num">2,230</td></tr>
+<tr><td>Florence</td><td>Burlington</td><td class="num">2,229</td></tr>
+<tr><td>Maple Shade</td><td>Burlington</td><td class="num">2,227</td></tr>
+<tr><td>West Deptford</td><td>Gloucester</td><td class="num">2,207</td></tr>
+<tr><td>Clayton</td><td>Gloucester</td><td class="num">2,191</td></tr>
+<tr><td>Atco</td><td>Camden</td><td class="num">2,183</td></tr>
+<tr><td>Ocean City</td><td>Cape May</td><td class="num">2,172</td></tr>
+<tr><td>Haddon</td><td>Camden</td><td class="num">2,133</td></tr>
+<tr><td>Maple Shade</td><td>Burlington</td><td class="num">2,095</td></tr>
+<tr><td>Berlin</td><td>Camden</td><td class="num">2,070</td></tr>
+<tr><td>Haddonfield</td><td>Camden</td><td class="num">2,055</td></tr>
+<tr><td>Deptford</td><td>Gloucester</td><td class="num">2,037</td></tr>
+<tr><td>Buena Vista</td><td>Atlantic</td><td class="num">2,017</td></tr>
               </tbody>
             </table>
           </details>
 
+          <!-- SMALL -->
           <details class="tier">
             <summary>
               <div class="tier-summary">
-                <span>Small towns (South Jersey)</span>
+                <span>Small towns</span>
                 <span class="tier-meta"><span class="tag">Small</span></span>
               </div>
             </summary>
 
-            <table class="townTable" data-region="south">
+            <table class="townTable">
               <thead><tr><th>Town</th><th>County</th><th style="text-align:right;">Single-Family Homes</th></tr></thead>
               <tbody>
-                <!-- Small South rows -->
+<tr><td>Elk</td><td>Gloucester</td><td class="num">1,104</td></tr>
+<tr><td>South Harrison</td><td>Gloucester</td><td class="num">1,094</td></tr>
+<tr><td>Frankford</td><td>Sussex</td><td class="num">1,089</td></tr>
+<tr><td>Newfield</td><td>Gloucester</td><td class="num">1,078</td></tr>
+<tr><td>Port Republic</td><td>Atlantic</td><td class="num">1,078</td></tr>
+<tr><td>Waldwick</td><td>Bergen</td><td class="num">1,076</td></tr>
+<tr><td>Alloway</td><td>Salem</td><td class="num">1,074</td></tr>
+<tr><td>Buena</td><td>Atlantic</td><td class="num">1,070</td></tr>
+<tr><td>Hopewell</td><td>Cumberland</td><td class="num">1,065</td></tr>
+<tr><td>Audubon Park</td><td>Camden</td><td class="num">1,064</td></tr>
+<tr><td>Roosevelt</td><td>Monmouth</td><td class="num">1,062</td></tr>
+<tr><td>Maurice River</td><td>Cumberland</td><td class="num">1,060</td></tr>
+<tr><td>Chesilhurst</td><td>Camden</td><td class="num">1,055</td></tr>
+<tr><td>Swedesboro</td><td>Gloucester</td><td class="num">1,053</td></tr>
+<tr><td>Washington</td><td>Warren</td><td class="num">1,052</td></tr>
+<tr><td>West Cape May</td><td>Cape May</td><td class="num">1,051</td></tr>
+<tr><td>Shiloh</td><td>Cumberland</td><td class="num">1,050</td></tr>
+<tr><td>Gibbsboro</td><td>Camden</td><td class="num">1,040</td></tr>
+<tr><td>Woodbine</td><td>Cape May</td><td class="num">1,039</td></tr>
+<tr><td>Mullica Hill</td><td>Gloucester</td><td class="num">1,037</td></tr>
+<tr><td>Woodstown</td><td>Salem</td><td class="num">1,033</td></tr>
+<tr><td>National Park</td><td>Gloucester</td><td class="num">1,028</td></tr>
+<tr><td>Commercial</td><td>Cumberland</td><td class="num">1,026</td></tr>
+<tr><td>Quinton</td><td>Salem</td><td class="num">1,017</td></tr>
+<tr><td>Westville Grove</td><td>Gloucester</td><td class="num">1,015</td></tr>
+<tr><td>Downe</td><td>Cumberland</td><td class="num">1,012</td></tr>
+<tr><td>Elsinboro</td><td>Salem</td><td class="num">1,011</td></tr>
+<tr><td>Pine Valley</td><td>Camden</td><td class="num">1,004</td></tr>
+<tr><td>Greenwich</td><td>Cumberland</td><td class="num">1,000</td></tr>
+<tr><td>Sandyston</td><td>Sussex</td><td class="num">995</td></tr>
+<tr><td>Shamong</td><td>Burlington</td><td class="num">994</td></tr>
+<tr><td>Corbin City</td><td>Atlantic</td><td class="num">989</td></tr>
+<tr><td>Hopewell</td><td>Mercer</td><td class="num">983</td></tr>
+<tr><td>Deerfield</td><td>Cumberland</td><td class="num">979</td></tr>
+<tr><td>Hampton</td><td>Sussex</td><td class="num">974</td></tr>
+<tr><td>East Greenwich</td><td>Gloucester</td><td class="num">973</td></tr>
+<tr><td>Estell Manor</td><td>Atlantic</td><td class="num">973</td></tr>
+<tr><td>Wenonah</td><td>Gloucester</td><td class="num">966</td></tr>
+<tr><td>Logan</td><td>Gloucester</td><td class="num">965</td></tr>
+<tr><td>Holland</td><td>Hunterdon</td><td class="num">958</td></tr>
+<tr><td>Bridgeton</td><td>Cumberland</td><td class="num">956</td></tr>
+<tr><td>New Hanover</td><td>Burlington</td><td class="num">955</td></tr>
+<tr><td>Mine Hill</td><td>Morris</td><td class="num">954</td></tr>
+<tr><td>Oaklyn</td><td>Camden</td><td class="num">950</td></tr>
+<tr><td>Sea Bright</td><td>Monmouth</td><td class="num">950</td></tr>
+<tr><td>Franklin</td><td>Hunterdon</td><td class="num">948</td></tr>
+<tr><td>Chesterfield</td><td>Burlington</td><td class="num">946</td></tr>
+<tr><td>Hammonton</td><td>Atlantic</td><td class="num">944</td></tr>
+<tr><td>Greenwich</td><td>Gloucester</td><td class="num">943</td></tr>
+<tr><td>Stow Creek</td><td>Cumberland</td><td class="num">943</td></tr>
+<tr><td>Roseland</td><td>Essex</td><td class="num">940</td></tr>
+<tr><td>Longport</td><td>Atlantic</td><td class="num">936</td></tr>
+<tr><td>Wrightstown</td><td>Burlington</td><td class="num">931</td></tr>
+<tr><td>Delaware</td><td>Hunterdon</td><td class="num">927</td></tr>
               </tbody>
             </table>
           </details>
 
           <p class="hint" style="margin-top:14px;">
-            Tip: We’ll build each town page over time. Cherry Hill is live now; others can be added as you scale.
+            Want these towns to link to individual pages? We can bulk-generate town pages next using your template.
           </p>
-        </div>
-      </section>
-
-      <!-- NORTH JERSEY -->
-      <section id="region-north" style="margin-top:20px; display:none;">
-        <div class="card">
-          <h2>North Jersey</h2>
-          <p class="muted-row">
-            Tier thresholds (single-family homes): Small ≤ 1,561 • Medium 1,562–3,138 • Large ≥ 3,139
-          </p>
-
-          <details class="tier" open>
-            <summary>
-              <div class="tier-summary">
-                <span>Large towns (North Jersey)</span>
-                <span class="tier-meta"><span class="tag">Large</span></span>
-              </div>
-            </summary>
-
-            <table class="townTable" data-region="north">
-              <thead><tr><th>Town</th><th>County</th><th style="text-align:right;">Single-Family Homes</th></tr></thead>
-              <tbody>
-                <!-- North Large rows -->
-              </tbody>
-            </table>
-          </details>
-
-          <details class="tier">
-            <summary>
-              <div class="tier-summary">
-                <span>Medium towns (North Jersey)</span>
-                <span class="tier-meta"><span class="tag">Medium</span></span>
-              </div>
-            </summary>
-
-            <table class="townTable" data-region="north">
-              <thead><tr><th>Town</th><th>County</th><th style="text-align:right;">Single-Family Homes</th></tr></thead>
-              <tbody>
-                <!-- North Medium rows -->
-              </tbody>
-            </table>
-          </details>
-
-          <details class="tier">
-            <summary>
-              <div class="tier-summary">
-                <span>Small towns (North Jersey)</span>
-                <span class="tier-meta"><span class="tag">Small</span></span>
-              </div>
-            </summary>
-
-            <table class="townTable" data-region="north">
-              <thead><tr><th>Town</th><th>County</th><th style="text-align:right;">Single-Family Homes</th></tr></thead>
-              <tbody>
-                <!-- North Small rows -->
-              </tbody>
-            </table>
-          </details>
         </div>
       </section>
 
@@ -385,39 +367,13 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Region tabs
-    const tabs = document.querySelectorAll(".tabbtn");
-    const south = document.getElementById("region-south");
-    const north = document.getElementById("region-north");
-
-    tabs.forEach(btn => {
-      btn.addEventListener("click", () => {
-        tabs.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const region = btn.getAttribute("data-region");
-        if(region === "south"){
-          south.style.display = "";
-          north.style.display = "none";
-        } else {
-          south.style.display = "none";
-          north.style.display = "";
-        }
-
-        // reset search on tab switch
-        document.getElementById("searchInput").value = "";
-        filterTables("");
-      });
-    });
-
-    // Search filter across visible tables
+    // Search filter across all tables
     const searchInput = document.getElementById("searchInput");
     searchInput.addEventListener("input", (e) => filterTables(e.target.value));
 
     function filterTables(query){
       const q = (query || "").toLowerCase().trim();
-      const visibleRegion = (south.style.display === "none") ? "north" : "south";
-      document.querySelectorAll(`table.townTable[data-region="${visibleRegion}"] tbody tr`).forEach(tr => {
+      document.querySelectorAll(`table.townTable tbody tr`).forEach(tr => {
         const text = tr.innerText.toLowerCase();
         tr.style.display = text.includes(q) ? "" : "none";
       });
