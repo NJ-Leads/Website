@@ -107,19 +107,19 @@
       .hero-grid { grid-template-columns: 1fr; }
     }
   
-/* === WHITE PANELS FOR SEARCH + TOWN LIST === */
+/* === WHITE PANELS FOR SEARCH + TOWN LIST ONLY === */
 
-.card.hero-card.white-panel {
-  background: #ffffff;
-  color: #111827;
+.white-panel {
+  background: #ffffff !important;
+  color: #111827 !important;
   border: 1px solid #e5e7eb;
 }
 
-.card.hero-card.white-panel h3,
-.card.hero-card.white-panel p,
-.card.hero-card.white-panel .small-note,
-.card.hero-card.white-panel .hint {
-  color: #374151;
+.white-panel h3,
+.white-panel p,
+.white-panel .small-note,
+.white-panel .hint {
+  color: #374151 !important;
 }
 
 .white-panel .searchbar input {
@@ -247,7 +247,7 @@
 
       <!-- TABLES -->
       <section class="section">
-        <div class="card hero-card white-panel">
+        <div class="card hero-card">
           <h3 style="margin-top:0;">Town list by tier</h3>
           <p class="small-note" style="margin-top:6px;">
             Tiers are derived from our current rollout dataset and may expand as coverage increases.
@@ -499,7 +499,7 @@
 
       <div class="divider"></div>
 
-      <div class="card hero-card white-panel">
+      <div class="card hero-card">
         <h3>Want to reserve a town?</h3>
         <p class="small-note">
           Tell us your target towns and categories. We’ll confirm availability and next steps.
