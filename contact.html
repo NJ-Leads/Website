@@ -48,7 +48,25 @@
       <div class="two-col">
         <!-- Left: Form -->
         <div class="card form">
-          <form action="#" method="post">
+
+          <!--
+            ✅ Email delivery setup (static site):
+            1) Create a Formspree form and set the recipient to: sales@njleads.com
+            2) Replace YOUR_FORMSPREE_ID below with the real ID (example: https://formspree.io/f/abcdwxyz)
+          -->
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+
+            <!-- Formspree helpers -->
+            <input type="hidden" name="_subject" value="New NJLeads Contact Submission" />
+            <input type="hidden" name="_format" value="plain" />
+            <!-- Optional redirect after submit -->
+            <!-- <input type="hidden" name="_next" value="https://njleads.com/thanks.html" /> -->
+
+            <!-- Honeypot (spam trap). Hide it with inline style so it doesn't affect your CSS -->
+            <div style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;">
+              <label>Do not fill this out: <input name="_gotcha" /></label>
+            </div>
+
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
