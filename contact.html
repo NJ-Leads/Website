@@ -13,7 +13,6 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="NJLeads Home">
-        <!-- IMPORTANT: match pricing page so nothing blows up -->
         <div class="brand-mark"><span>NJ</span></div>
         <div>
           <div class="brand-name"><span class="nj">NJ</span><span class="leads">Leads</span></div>
@@ -46,25 +45,23 @@
       </p>
 
       <div class="two-col">
+
         <!-- Left: Form -->
         <div class="card form">
+          <form action="https://formspree.io/f/xjgepkgo" method="POST">
 
-          <!--
-            ✅ Email delivery setup (static site):
-            1) Create a Formspree form and set the recipient to: sales@njleads.com
-            2) Replace YOUR_FORMSPREE_ID below with the real ID (example: https://formspree.io/f/abcdwxyz)
-          -->
-          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-
-            <!-- Formspree helpers -->
+            <!-- Email Subject -->
             <input type="hidden" name="_subject" value="New NJLeads Contact Submission" />
             <input type="hidden" name="_format" value="plain" />
+
             <!-- Optional redirect after submit -->
             <!-- <input type="hidden" name="_next" value="https://njleads.com/thanks.html" /> -->
 
-            <!-- Honeypot (spam trap). Hide it with inline style so it doesn't affect your CSS -->
+            <!-- Honeypot Spam Protection -->
             <div style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;">
-              <label>Do not fill this out: <input name="_gotcha" /></label>
+              <label>Do not fill this out:
+                <input name="_gotcha" />
+              </label>
             </div>
 
             <div class="field">
@@ -107,16 +104,17 @@
             <div class="notice">
               By submitting, you agree to be contacted by NJLeads about availability and onboarding.
             </div>
+
           </form>
         </div>
 
-        <!-- Right: Sales copy / next steps -->
+        <!-- Right Side Content -->
         <div>
           <div class="card hero-card">
             <h3>How reservations work</h3>
             <p class="small-note">
-              We offer exclusive rights by <strong>town + category</strong>. Once a town/category is reserved, we don’t sell it
-              to competing contractors.
+              We offer exclusive rights by <strong>town + category</strong>. Once a town/category is reserved,
+              we don’t sell it to competing contractors.
             </p>
             <p class="small-note">
               You’ll receive a private portal experience with a detailed property list, visuals, and tracking—refreshed annually.
@@ -136,14 +134,14 @@
           <div class="card hero-card">
             <h3>Faster outreach. Better close rate.</h3>
             <p class="small-note">
-              Instead of guessing where to knock, NJLeads helps you prioritize the highest-opportunity streets with visual indicators
-              of exterior replacement needs.
+              Instead of guessing where to knock, NJLeads helps you prioritize the highest-opportunity streets
+              with visual indicators of exterior replacement needs.
             </p>
             <a class="btn" href="pricing.html" style="margin-top:6px;">View pricing</a>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </main>
 
