@@ -107,76 +107,58 @@
       .hero-grid { grid-template-columns: 1fr; }
     }
   
-/* === WHITE PANELS FOR SEARCH + TOWN LIST ONLY === */
-
-.white-panel {
-  background: #ffffff !important;
-  color: #111827 !important;
-  border: 1px solid #e5e7eb;
+/* === WHITE PANELS: SEARCH + TOWN LIST ONLY === */
+.white-panel{
+  background:#ffffff !important;
+  color:#111827 !important;
+  border:1px solid #e5e7eb !important;
 }
-
 .white-panel h3,
 .white-panel p,
 .white-panel .small-note,
-.white-panel .hint {
-  color: #374151 !important;
+.white-panel .hint{ color:#374151 !important; }
+
+.white-panel .searchbar input{
+  background:#ffffff !important;
+  border:1px solid #d1d5db !important;
+  color:#111827 !important;
+}
+.white-panel .searchbar input::placeholder{ color:#9ca3af !important; }
+
+.white-panel .table-wrap{ border:1px solid #e5e7eb !important; }
+.white-panel table{ color:#111827; }
+.white-panel thead th{
+  background:#f9fafb !important;
+  color:#111827 !important;
+  border-bottom:1px solid #e5e7eb !important;
+}
+.white-panel tbody td{
+  background:#ffffff !important;
+  color:#374151 !important;
+  border-bottom:1px solid #f3f4f6 !important;
+}
+.white-panel tbody tr:hover td{ background:#f9fafb !important; }
+.white-panel td.num{ color:#111827 !important; }
+.white-panel tbody a{
+  color:#111827 !important;
+  border-bottom:1px solid rgba(243,111,10,.35) !important;
 }
 
-.white-panel .searchbar input {
-  background: #ffffff;
-  border: 1px solid #d1d5db;
-  color: #111827;
-}
-
-.white-panel .searchbar input::placeholder {
-  color: #9ca3af;
-}
-
-.white-panel .table-wrap {
-  border: 1px solid #e5e7eb;
-}
-
-.white-panel thead th {
-  background: #f9fafb;
-  color: #111827;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.white-panel tbody td {
-  background: #ffffff;
-  color: #374151;
-  border-bottom: 1px solid #f3f4f6;
-}
-
-.white-panel tbody tr:hover td {
-  background: #f9fafb;
-}
-
-.white-panel td.num {
-  color: #111827;
-}
-
-.white-panel tbody a {
-  color: #111827;
-  border-bottom: 1px solid rgba(243,111,10,.35);
-}
-
-
-/* === FORCE SEARCH SECTION WHITE === */
-#searchInput {
-  background: #ffffff !important;
-  color: #111827 !important;
-  border: 1px solid #d1d5db !important;
-}
-
-/* === ORANGE TIER BADGES (match Client Portal button vibe) === */
-.tag {
-  background: linear-gradient(135deg, #ff8a1a, #f36f0a) !important;
-  border: none !important;
-  color: #ffffff !important;
-  font-weight: 700;
+/* === TIER HEADER PILLS: make LEFT labels orange, remove RIGHT badges === */
+.tier-summary .tag{ display:none !important; } /* remove right-side */
+.tier-summary span:first-child{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background: linear-gradient(135deg, #ff8a1a, #f36f0a);
+  color:#ffffff;
+  font-weight:900;
   box-shadow: 0 4px 12px rgba(243,111,10,.35);
 }
+/* keep the summary row layout */
+.tier-summary{ padding: 14px 0; }
 
 </style>
 </head>
@@ -232,7 +214,7 @@
           </div>
         </div>
 
-        <div class="card hero-card white-panel">
+        <div class="card hero-card">
           <h3>How to use this page</h3>
           <p class="small-note">
             Search by town or county, then expand the tier you want. Towns link to individual town pages.
@@ -248,7 +230,7 @@
 
       <!-- SEARCH -->
       <section class="section">
-        <div class="card hero-card">
+        <div class="card hero-card white-panel">
           <h3 style="margin-top:0;">Search towns</h3>
           <div class="searchbar">
             <input id="searchInput" type="text" placeholder="Search by town or county (e.g., Cherry Hill, Camden, Burlington)..." />
@@ -264,7 +246,7 @@
 
       <!-- TABLES -->
       <section class="section">
-        <div class="card hero-card">
+        <div class="card hero-card white-panel">
           <h3 style="margin-top:0;">Town list by tier</h3>
           <p class="small-note" style="margin-top:6px;">
             Tiers are derived from our current rollout dataset and may expand as coverage increases.
